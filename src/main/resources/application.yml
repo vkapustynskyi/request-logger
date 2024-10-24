@@ -1,0 +1,13 @@
+spring:
+  application.name: request-logger
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: vkapustynskyi
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false

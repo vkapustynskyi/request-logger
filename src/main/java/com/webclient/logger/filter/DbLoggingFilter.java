@@ -32,6 +32,7 @@ public class DbLoggingFilter implements ExchangeFilterFunction {
     private Mono<ApiLog> logRequest(ClientRequest request) {
         return Mono.fromCallable(() -> {
             ApiLog apiLog = new ApiLog();
+            apiLog.setRequestUri(request.url().toString());
             apiLog.setRequestBody("test"); // todo: get body
             apiLog.setRequestTime(Instant.now());
             return apiLogRepository.save(apiLog);

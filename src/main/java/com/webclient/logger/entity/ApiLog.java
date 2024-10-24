@@ -18,6 +18,8 @@ public class ApiLog {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String requestUri;
+
     private Instant requestTime;
 
     private Instant responseTime;
